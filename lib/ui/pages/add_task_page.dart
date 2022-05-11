@@ -25,7 +25,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
       .format(DateTime.now().add(const Duration(minutes: 15)))
       .toString();
   int _slctdrmind = 5;
-  List<int> rmindLst = [5, 10, 15, 20];
+  List<int> rmindLst = [1, 5, 10, 15, 20];
   String _slctdrepeat = 'None';
   List<String> repeatLst = ['None', 'Daily', 'Weekly', 'Monthly'];
   int _slctClr = 0;

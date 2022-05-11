@@ -130,7 +130,9 @@ class NotifyHelper {
   }
 
   tz.TZDateTime reminding(int remind, tz.TZDateTime scheduledDate) {
-    if (remind == 5)
+    if (remind == 1)
+      scheduledDate = scheduledDate.subtract(const Duration(minutes: 1));
+    else if (remind == 5)
       scheduledDate = scheduledDate.subtract(const Duration(minutes: 5));
     else if (remind == 10)
       scheduledDate = scheduledDate.subtract(const Duration(minutes: 10));

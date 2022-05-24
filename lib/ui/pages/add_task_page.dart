@@ -24,10 +24,10 @@ class _AddTaskPageState extends State<AddTaskPage> {
   String _endTime = DateFormat('hh:mm a')
       .format(DateTime.now().add(const Duration(minutes: 15)))
       .toString();
-  int _slctdrmind = 5;
+  int _slctdrmind = 1;
   List<int> rmindLst = [1, 5, 10, 15, 20];
-  String _slctdrepeat = 'None';
-  List<String> repeatLst = ['None', 'Daily', 'Weekly', 'Monthly'];
+  String _slctdrepeat = 'Daily';
+  List<String> repeatLst = ['Daily', 'Weekly', 'Monthly'];
   int _slctClr = 0;
   @override
   Widget build(BuildContext context) {

@@ -2,15 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
-
 import '../models/tsk.dart';
-//import '/models/task.dart';
 
 class DBHelper {
   static Database? _db;
   static const int _vrsion = 1;
   static const String _tableNme = 'Tasks';
-
   static Future<void> initDB() async {
     if (_db != null) {
       debugPrint('Not null db');
@@ -63,7 +60,7 @@ class DBHelper {
     return await _db!.rawUpdate('''
     UPDATE Tasks
     SET isCompleted = ?
-    WHERE id =?
+    WHERE id = ?
       ''', [1, id]);
   }
 }
